@@ -1,0 +1,1955 @@
+{
+  "1": {
+    "name": "Health State",
+    "description": "Represents the current health of the entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is at a normal state of health."
+      },
+      "2": {
+        "name": "Non-Critical",
+        "description": "The entity is not at a normal state of health, but is still operational."
+      },
+      "3": {
+        "name": "Critical",
+        "description": "The entity is at a critical state of health. The entity may have suffered permanent damage, and may not be functional."
+      },
+      "4": {
+        "name": "Fatal",
+        "description": "The entity is at a fatal state of health."
+      },
+      "5": {
+        "name": "Upper Non-Critical",
+        "description": "The entity’s health is non-critical. The sensor is indicating that the entity is in the upper non-critical state."
+      },
+      "6": {
+        "name": "Lower Non-Critical",
+        "description": "The entity’s health is non-critical. The sensor is indicating that the entity is in the lower non-critical state."
+      },
+      "7": {
+        "name": "Upper Critical",
+        "description": "The entity’s health is critical. The sensor is indicating that the entity is in the upper critical state."
+      },
+      "8": {
+        "name": "Lower Critical",
+        "description": "The entity’s health is critical. The sensor is indicating that the entity is in the lower critical state."
+      },
+      "9": {
+        "name": "Upper Fatal",
+        "description": "The entity’s health is fatal. The sensor is indicating that the entity is in the upper fatal state."
+      },
+      "10": {
+        "name": "Lower Fatal",
+        "description": "The entity’s health is fatal. The sensor is indicating that the entity is in the lower fatal state."
+      }
+    }
+  },
+  "2": {
+    "name": "Availability",
+    "description": "The operational state of the entity.",
+    "state": {
+      "1": {
+        "name": "Enabled",
+        "description": "The entity is in an enabled state."
+      },
+      "2": {
+        "name": "Disabled",
+        "description": "The entity is in a disabled state."
+      },
+      "3": {
+        "name": "Shutdown",
+        "description": "The entity has been shut down."
+      },
+      "4": {
+        "name": "Offline",
+        "description": "The entity is in an offline test."
+      },
+      "5": {
+        "name": "In Test",
+        "description": "The entity is in a test mode."
+      },
+      "6": {
+        "name": "Deferred",
+        "description": "The entity has been deferred to function."
+      },
+      "7": {
+        "name": "Quiescent",
+        "description": "The entity is quiescent to function."
+      },
+      "8": {
+        "name": "Rebooting",
+        "description": "The entity is currently rebooting."
+      },
+      "9": {
+        "name": "Resetting",
+        "description": "The entity is resetting."
+      },
+      "10": {
+        "name": "Failed",
+        "description": "The entity is in a failed state."
+      },
+      "11": {
+        "name": "Not Installed",
+        "description": "The entity is not installed."
+      },
+      "12": {
+        "name": "Power Save Mode",
+        "description": "The entity is in a power save mode."
+      },
+      "13": {
+        "name": "Paused",
+        "description": "The entity is paused."
+      },
+      "14": {
+        "name": "Shutting Down",
+        "description": "The entity is shutting down."
+      },
+      "15": {
+        "name": "Starting",
+        "description": "The entity is starting or initializing."
+      },
+      "16": {
+        "name": "Not Responding",
+        "description": "The entity has stopped responding."
+      }
+    }
+  },
+  "3": {
+    "name": "Predictive Condition",
+    "description": "The sense of whether the entity will experience an error condition in the future.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is not indicating a predictive error condition."
+      },
+      "2": {
+        "name": "Predictive Failure",
+        "description": "The entity is showing the characteristics of experiencing a failure in the future."
+      }
+    }
+  },
+  "4": {
+    "name": "Redundancy Status",
+    "description": "For a group of entities that together provide redundancy, represents the condition of the group.",
+    "state": {
+      "1": {
+        "name": "Fully Redundant",
+        "description": "All entities in the redundancy group are functioning correctly."
+      },
+      "2": {
+        "name": "Redundancy Degraded",
+        "description": "One or more entities in the redundancy group are unable to contribute to the redundancy. However, sufficient entities remain such that one or more additional entities would need to lose their ability to contribute for redundancy to be lost."
+      },
+      "3": {
+        "name": "Redundancy Lost",
+        "description": "No redundancy exists in the redundancy group. There may or may not be sufficient resources to continue with full operation using the remaining entities."
+      }
+    }
+  },
+  "5": {
+    "name": "Health/Redundancy Trend",
+    "description": "Represents whether the health (or redundancy) state has improved or is getting worse since the last value of health (or redundancy). For example, if Health State was Lower Non-Critical and is now Lower Critical, the trend is Degrading; if redundancy was Redundancy Lost and is now Redundancy Degraded, the trend is Improving.",
+    "state": {
+      "1": {
+        "name": "Unchanged",
+        "description": "The health/redundancy state of the entity is not changing."
+      },
+      "2": {
+        "name": "Improving",
+        "description": "The health/redundancy state of the entity has improved from the last health/redundancy state."
+      },
+      "3": {
+        "name": "Degrading",
+        "description": "The health/redundancy state of the entity has degraded from the last health/redundancy state."
+      }
+    }
+  },
+  "6": {
+    "name": "Group Resource Level",
+    "description": "Represents the resource level of the group of entities. Applies for a group of entities that provide redundancy as a group.",
+    "state": {
+      "1": {
+        "name": "Sufficient Resources",
+        "description": "The group has a sufficient number of entities to provide the level of service that the group is designed to provide."
+      },
+      "2": {
+        "name": "Excess Resources",
+        "description": "The group has more than the minimum number of entities to provide the level of service that the group is designed to provide."
+      },
+      "3": {
+        "name": "Insufficient Resources",
+        "description": "The group does not have a sufficient number of entities to provide the level of service that the group is designed to provide."
+      }
+    }
+  },
+  "7": {
+    "name": "Redundancy Entity Role",
+    "description": "Represents the role of the individual entity in a redundant group.",
+    "state": {
+      "1": {
+        "name": "Is Hot Spare",
+        "description": "This entity is reserved and on stand-by in the event of an error in a redundancy group. It is a passive member of a redundancy group."
+      },
+      "2": {
+        "name": "In Redundancy Group",
+        "description": "This entity is a member of a redundancy group. It may be active or passive."
+      },
+      "3": {
+        "name": "",
+        "description": "In (non-redundant) Group The entity is a member of a group in which the service load is shared among the members of the group, but there is no fault-tolerant redundancy in the group."
+      }
+    }
+  },
+  "8": {
+    "name": "Operational Status",
+    "description": "The operational status of the entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is functioning with expected performance or capacity."
+      },
+      "2": {
+        "name": "Degraded",
+        "description": "The entity is functioning with reduced performance or capacity."
+      },
+      "3": {
+        "name": "Completed",
+        "description": "The entity has completed its function."
+      },
+      "4": {
+        "name": "Migrating",
+        "description": "The operation is being moved between entities."
+      },
+      "5": {
+        "name": "Emigrating",
+        "description": "The operation is being moved to a different entity."
+      },
+      "6": {
+        "name": "Immigrating",
+        "description": "The operation is being moved to this entity from a different entity."
+      }
+    }
+  },
+  "9": {
+    "name": "Operational Stress Status",
+    "description": "The stress status of the monitored entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is functioning with expected performance or capacity."
+      },
+      "2": {
+        "name": "Stressed",
+        "description": "The entity is functioning near the bounds of its acceptable performance or capacity."
+      }
+    }
+  },
+  "10": {
+    "name": "Operational Fault Status",
+    "description": "The fault status of the monitored entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No fault is present."
+      },
+      "2": {
+        "name": "Error",
+        "description": "A fault that causes an entity to deviate from its expected behavior is present."
+      },
+      "3": {
+        "name": "Non-Recoverable Error",
+        "description": "A fault that prohibits an entity from continuing to run is present."
+      }
+    }
+  },
+  "11": {
+    "name": "Operational Running Status",
+    "description": "The running status of the monitored entity.",
+    "state": {
+      "1": {
+        "name": "Starting",
+        "description": "The entity is beginning to run."
+      },
+      "2": {
+        "name": "Stopping",
+        "description": "The entity is ceasing to run."
+      },
+      "3": {
+        "name": "Stopped",
+        "description": "The entity is no longer running."
+      },
+      "4": {
+        "name": "In Service",
+        "description": "The entity is available for use."
+      },
+      "5": {
+        "name": "Aborted",
+        "description": "The entity has prematurely ended."
+      },
+      "6": {
+        "name": "Dormant",
+        "description": "The entity is inactive."
+      }
+    }
+  },
+  "12": {
+    "name": "Operational Connection Status",
+    "description": "Indicates whether the entity has the connectivity necessary to function.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Communication is established with the entity."
+      },
+      "2": {
+        "name": "No Contact",
+        "description": "Communication could not be established with the entity."
+      },
+      "3": {
+        "name": "Lost Communication",
+        "description": "The ability to communicate with the entity has stopped."
+      }
+    }
+  },
+  "13": {
+    "name": "Presence",
+    "description": "Indicates whether the entity is present in the system.",
+    "state": {
+      "1": {
+        "name": "Present",
+        "description": "The entity is successfully detected."
+      },
+      "2": {
+        "name": "Not Present",
+        "description": "The entity is not detected."
+      }
+    }
+  },
+  "14": {
+    "name": "Performance",
+    "description": "The performance of any type of entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is operating at a full functional level at full speed."
+      },
+      "2": {
+        "name": "Throttled",
+        "description": "The entity is operating at a full functional level at reduced speed."
+      },
+      "3": {
+        "name": "Degraded",
+        "description": "The entity is operating at a degraded functional level."
+      }
+    }
+  },
+  "15": {
+    "name": "Configuration State",
+    "description": "For any entity that can be dynamically configured and have a configuration state.",
+    "state": {
+      "1": {
+        "name": "Valid Configuration",
+        "description": "The entity is configured with valid configuration settings."
+      },
+      "2": {
+        "name": "Invalid Configuration",
+        "description": "The entity is configured with invalid configuration settings."
+      },
+      "3": {
+        "name": "Not Configured",
+        "description": "The entity is detected to not be configured."
+      },
+      "4": {
+        "name": "Missing Configuration",
+        "description": "The entity is missing its configuration settings."
+      }
+    }
+  },
+  "16": {
+    "name": "Changed Configuration",
+    "description": "For any entity that may have its configuration settings changed.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Configuration change is not detected."
+      },
+      "2": {
+        "name": "Configuration Change Detected",
+        "description": "A configuration change in the entity is detected."
+      }
+    }
+  },
+  "17": {
+    "name": "Identify State",
+    "description": "For entities that have an identify function, such as LEDs.",
+    "state": {
+      "1": {
+        "name": "Identify State Unasserted",
+        "description": "The entity’s identify function is not asserted."
+      },
+      "2": {
+        "name": "Identify State Asserted",
+        "description": "The entity’s identify function is asserted."
+      }
+    }
+  },
+  "18": {
+    "name": "Version",
+    "description": "Version change status.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No version change is detected. If this is used by PLDM state set sensor, a manual re-arm would set this sensor back to the Normal state."
+      },
+      "2": {
+        "name": "Version Change Detected – Compatible",
+        "description": "A firmware or hardware version change of the entity is detected. No compatibility conflicts are detected."
+      },
+      "3": {
+        "name": "Version Change Detected – Incompatible",
+        "description": "A firmware or hardware version change of the entity is detected. The new version is incompatible with other entities."
+      }
+    }
+  },
+  "19": {
+    "name": "Alarm State",
+    "description": "The current activity of an alarm device.",
+    "state": {
+      "1": {
+        "name": "Off",
+        "description": "The alarm is not active."
+      },
+      "2": {
+        "name": "Steady On",
+        "description": "The alarm has been activated with the “steady on” setting."
+      },
+      "3": {
+        "name": "Alternating On",
+        "description": "The alarm has been activated with the “alternating on” setting."
+      }
+    }
+  },
+  "20": {
+    "name": "Device Initialization",
+    "description": "The state of device initialization.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The device is initialized."
+      },
+      "2": {
+        "name": "",
+        "description": "Initialization in Progress The device is in the process of initializing."
+      },
+      "3": {
+        "name": "Initialization Hung",
+        "description": "The initialization process stopped responding."
+      },
+      "4": {
+        "name": "Initialization Failed",
+        "description": "The initialization process failed."
+      }
+    }
+  },
+  "21": {
+    "name": "Thermal Thermal Trip",
+    "description": "Trip condition.",
+    "state": {
+      "1": {
+        "name": "Normal A Thermal",
+        "description": "Trip is not presently detected."
+      },
+      "2": {
+        "name": "Thermal Trip",
+        "description": "The entity automatically shut itself down due to an internal over-temperature condition."
+      }
+    }
+  },
+  "32": {
+    "name": "Heartbeat",
+    "description": "Heartbeat state.",
+    "state": {
+      "1": {
+        "name": "",
+        "description": "Heartbeat present  Periodic messages or signal transitions that are used to verify the availability of communication with a particular node are detected."
+      },
+      "2": {
+        "name": "",
+        "description": "Heartbeat lost Periodic messages or signal transitions that are used to verify the availability of communication with a particular node are not detected."
+      }
+    }
+  },
+  "33": {
+    "name": "Link State",
+    "description": "For any entity that has a data link to another entity.",
+    "state": {
+      "1": {
+        "name": "Connected",
+        "description": "The link is in the connected state."
+      },
+      "2": {
+        "name": "Disconnected",
+        "description": "The link is in the disconnected state."
+      }
+    }
+  },
+  "64": {
+    "name": "Smoke State",
+    "description": "Indicates whether smoke is detected.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The sensor is not detecting abnormal levels of smoke."
+      },
+      "2": {
+        "name": "Smoke",
+        "description": "The sensor detected abnormal levels of smoke."
+      }
+    }
+  },
+  "65": {
+    "name": "Humidity State",
+    "description": "Indicates whether humidity is detected.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The sensor is not detecting abnormal levels of humidity."
+      },
+      "2": {
+        "name": "Humid",
+        "description": "The sensor detected abnormal levels of humidity."
+      }
+    }
+  },
+  "66": {
+    "name": "Door State",
+    "description": "Indicates the state of the physical door.",
+    "state": {
+      "1": {
+        "name": "Open",
+        "description": "The sensor detects that the door is open."
+      },
+      "2": {
+        "name": "Closed",
+        "description": "The sensor detects that the door is closed."
+      }
+    }
+  },
+  "67": {
+    "name": "Switch State",
+    "description": "Indicates the state of an on/off switch. This could represent NMI, power switch, or any switch present on the system.",
+    "state": {
+      "1": {
+        "name": "Pressed/On",
+        "description": "The switch is in the on state."
+      },
+      "2": {
+        "name": "Released/Off",
+        "description": "The switch is in the off state."
+      }
+    }
+  },
+  "96": {
+    "name": "Lock State",
+    "description": "For an entity that can have a lock state.",
+    "state": {
+      "1": {
+        "name": "Locked",
+        "description": "The entity is in a locked state."
+      },
+      "2": {
+        "name": "Unlocked",
+        "description": "The entity is not in a locked state."
+      },
+      "3": {
+        "name": "Locked Out",
+        "description": "The entity is in a state in which the lock (physical or logical) cannot be unlocked in a normal manner. It is likely that elevated privileges are necessary to unlock the entity."
+      }
+    }
+  },
+  "97": {
+    "name": "Physical Security",
+    "description": "Security status related to physical hardware.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No abnormal physical security conditions are detected at this time."
+      },
+      "2": {
+        "name": "Hardware Intrusion",
+        "description": "A door, lock, or other mechanism protecting the internal system hardware from being accessed is detected as being in an insecure state."
+      },
+      "3": {
+        "name": "Tampering",
+        "description": "Physical tampering of the monitored entity is detected."
+      }
+    }
+  },
+  "98": {
+    "name": "Dock Authorization",
+    "description": "Security status related to docking.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No unauthorized docking or undocking activity is detected."
+      },
+      "2": {
+        "name": "Unauthorized Dock",
+        "description": "The monitored entity is docked with a receiver in an unauthorized manner, or an unauthorized entity is docked with the monitored entity."
+      },
+      "3": {
+        "name": "Unauthorized Undock",
+        "description": "The monitored entity is undocked in an unauthorized manner, or an entity that was docked with the monitored entity is undocked in an unauthorized manner."
+      }
+    }
+  },
+  "99": {
+    "name": "Hardware Security",
+    "description": "States that should be associated with a \"Security Hardware\" type of entity, or a TPM.",
+    "state": {
+      "1": {
+        "name": "Hardware Verified Security",
+        "description": "Security hardware that is associated with maintaining security for the monitored entity is detected as being functional."
+      },
+      "2": {
+        "name": "Hardware Unverified Security",
+        "description": "Security hardware that is associated with maintaining security for the monitored entity failed one or more checks verifying that it is functional and complete."
+      }
+    }
+  },
+  "100": {
+    "name": "Physical Communication Connection",
+    "description": "Security status related to physical connection to an entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No physical connection issues are detected at this time."
+      },
+      "2": {
+        "name": "Physical",
+        "description": "Disconnect from Network A physical disconnection from the communication medium is detected. This may be due to the physical removal of the system."
+      }
+    }
+  },
+  "101": {
+    "name": "Communication Leash Status",
+    "description": "The status of the communication leash, which is the communications link between this entity and a remote network entity.",
+    "state": {
+      "1": {
+        "name": "Leash Connected",
+        "description": "Special periodic messages or transmissions that indicate physical connection to an expected network or communication medium are detected."
+      },
+      "2": {
+        "name": "Leash Disconnected",
+        "description": "Special periodic messages or transmissions that indicate physical connection to an expected network or communication medium are lost."
+      }
+    }
+  },
+  "102": {
+    "name": "Foreign Network Detection Status",
+    "description": "Status of a connection to an unexpected or unauthorized network or medium.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is not detected as being connected to an unrecognized or unauthorized network or communication medium."
+      },
+      "2": {
+        "name": "Foreign Network Detected",
+        "description": "The entity is connected to an unrecognized or unauthorized network or communication medium."
+      }
+    }
+  },
+  "103": {
+    "name": "Password-Protected Access Security",
+    "description": "Security status related to the access of the monitored entity.",
+    "state": {
+      "1": {
+        "name": "Password Violations Detected No",
+        "description": "No password violations are detected."
+      },
+      "2": {
+        "name": "Password Violation Attempted",
+        "description": "A password violation attempt is detected."
+      }
+    }
+  },
+  "104": {
+    "name": "Security",
+    "description": "Access – Privilege Level Indicates what privilege (if any) has been used for logging onto the entity.",
+    "state": {
+      "1": {
+        "name": "Privilege Level Access Detected No",
+        "description": "No privilege level is detected."
+      },
+      "2": {
+        "name": "Read-only Privilege",
+        "description": "The entity is a target of a logon using read-only privilege."
+      },
+      "3": {
+        "name": "Full Control Privilege",
+        "description": "The entity is a target of a logon using full control privilege."
+      }
+    }
+  },
+  "105": {
+    "name": "Session Audit PLDM",
+    "description": "PLDM session audit status.",
+    "state": {
+      "1": {
+        "name": "Session Activated  A",
+        "description": "PLDM session is activated with a PLDM terminus associated with the state sensor."
+      },
+      "2": {
+        "name": "Session Deactivated A",
+        "description": "PLDM session is deactivated with a PLDM terminus associated with the state sensor. PLDM State set"
+      }
+    }
+  },
+  "129": {
+    "name": "Software Termination Status",
+    "description": "Status related to firmware of the operating system.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Software termination is not detected."
+      },
+      "2": {
+        "name": "Termination Detected Software",
+        "description": "Software termination is detected."
+      },
+      "3": {
+        "name": "Critical",
+        "description": "Stop during Load/Initialization The software entity failed during loading or initialization."
+      },
+      "4": {
+        "name": "Run-time Critical Stop",
+        "description": "The software entity incurred a run-time failure."
+      },
+      "5": {
+        "name": "Graceful Shutdown Requested",
+        "description": "The software entity has been requested to shut down gracefully."
+      },
+      "6": {
+        "name": "Graceful Restart Requested",
+        "description": "The software entity has been requested to restart gracefully."
+      },
+      "7": {
+        "name": "Graceful Shutdown",
+        "description": "The software entity has been shut down gracefully."
+      },
+      "8": {
+        "name": "Termination Request Failed",
+        "description": "The request to terminate the execution of the software entity failed."
+      }
+    }
+  },
+  "160": {
+    "name": "Storage Media Activity",
+    "description": "Represents the current activity of storage media that is part of a redundancy group.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The entity is not showing any array configuration or maintenance activity."
+      },
+      "2": {
+        "name": "Parity",
+        "description": "Check in Progress  A parity check is in progress on the storage entity."
+      },
+      "3": {
+        "name": "Rebuilding/Remapping",
+        "description": "A rebuild or remap operation is in progress on the storage entity."
+      },
+      "4": {
+        "name": "Rebuild/Remap Aborted",
+        "description": "A rebuild or remap operation has been aborted on the storage entity."
+      },
+      "5": {
+        "name": "",
+        "description": "Prepare for Removal The storage entity has been prepared for removal."
+      }
+    }
+  },
+  "192": {
+    "name": "Boot/Restart Cause",
+    "description": "Represents the stimulus that booted the entity.",
+    "state": {
+      "1": {
+        "name": "Powered Up",
+        "description": "A start of the system is initiated by changing the entity’s state from powered off to powered on."
+      },
+      "2": {
+        "name": "Hard Reset",
+        "description": "A restart of the system is accomplished by activating the entity’s reset circuitry."
+      },
+      "3": {
+        "name": "Warm Reset",
+        "description": "A restart of the system is performed by software that does not involve powering the system off or activating the entity’s reset circuitry."
+      },
+      "4": {
+        "name": "Manual Hard Reset",
+        "description": "A restart is initiated by the user activation of a mechanical device (for example, pressing a button) and bypasses runtime software."
+      },
+      "5": {
+        "name": "Manual Warm Reset",
+        "description": "A restart is initiated by the user activation of a mechanical device (for example, pressing a button) and does not involve powering the entity off or activating the system’s reset circuitry."
+      },
+      "6": {
+        "name": "System Restart",
+        "description": "A restart of the entity is initiated by entity hardware components and accomplished by activating the system’s reset circuitry."
+      },
+      "7": {
+        "name": "Watchdog Timeout",
+        "description": "A restart of the entity is initiated in response to a detected system hang condition."
+      }
+    }
+  },
+  "193": {
+    "name": "Boot/Restart Request",
+    "description": "Indicates status of a request to restart the system in order to boot from a different source.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No boot/restart request is detected."
+      },
+      "2": {
+        "name": "Boot/Restart Requested",
+        "description": "A boot/restart request is detected."
+      }
+    }
+  },
+  "194": {
+    "name": "Entity Boot Status",
+    "description": "Indicates whether the entity was used as the boot device.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "This entity was not used as a boot device."
+      },
+      "2": {
+        "name": "Boot",
+        "description": "Initiation from This Entity Was Detected This entity was used as a boot device."
+      }
+    }
+  },
+  "195": {
+    "name": "Boot Error Status",
+    "description": "System boot error status.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No boot error is detected."
+      },
+      "2": {
+        "name": "No Bootable Media",
+        "description": "The device selected for the boot source could not be accessed, or the media in that device does not contain a boot sector."
+      },
+      "3": {
+        "name": "Invalid Boot Sector",
+        "description": "The boot sector does not contain valid data for booting."
+      },
+      "4": {
+        "name": "",
+        "description": "Timeout for Boot Selection A timeout occurred while accessing the boot sector from the selected boot source (possible boot from default instead)."
+      },
+      "5": {
+        "name": "Remote Media Server Not Found",
+        "description": "The server that provides the bootstrap program could not be located or a communication error occurred with the remote media server."
+      }
+    }
+  },
+  "196": {
+    "name": "Boot Progress",
+    "description": "System firmware or software booting status.",
+    "state": {
+      "1": {
+        "name": "Boot Not Active",
+        "description": "Boot-up of the firmware or software is not active. It may be already functional."
+      },
+      "2": {
+        "name": "Boot Completed",
+        "description": "The boot process of the firmware or software has completed."
+      },
+      "3": {
+        "name": "Memory Initialization",
+        "description": "The boot process is currently initializing the memory."
+      },
+      "4": {
+        "name": "Hard-Disk Initialization",
+        "description": "The boot process is currently initializing the hard disk."
+      },
+      "5": {
+        "name": "Secondary Processor(s) Initialization",
+        "description": "The boot process is currently initializing the secondary processors."
+      },
+      "6": {
+        "name": "User Authentication",
+        "description": "The boot process is processing the user authentication."
+      },
+      "7": {
+        "name": "User-Initiated Setup System",
+        "description": "System firmware or BIOS has entered the user system firmware or BIOS configuration setup."
+      },
+      "8": {
+        "name": "USB Resource Configuration",
+        "description": "System firmware or BIOS is currently configuring the USB resource."
+      },
+      "9": {
+        "name": "PCI Resource Configuration",
+        "description": "System firmware or BIOS is configuring the PCI resources."
+      },
+      "10": {
+        "name": "Option ROM Initialization",
+        "description": "The option ROM is being initialized."
+      },
+      "11": {
+        "name": "Video Initialization",
+        "description": "The video controller is being initialized."
+      },
+      "12": {
+        "name": "Cache Initialization",
+        "description": "The cache memory is being initialized."
+      },
+      "13": {
+        "name": "SM Bus Initialization",
+        "description": "The system firmware or BIOS is initializing the SM Bus."
+      },
+      "14": {
+        "name": "Keyboard Controller Initialization",
+        "description": "The system firmware or BIOS is initializing the keyboard controller."
+      },
+      "15": {
+        "name": "Embedded Controller/Management Controller Initialization",
+        "description": "The system firmware or BIOS is initializing the embedded management controller."
+      },
+      "16": {
+        "name": "Docking Station Attachment",
+        "description": "The main system unit is attaching to the docking station."
+      },
+      "17": {
+        "name": "Enabling Docking Station",
+        "description": "The system firmware or BIOS is enabling the docking station."
+      },
+      "18": {
+        "name": "Docking Station Ejection",
+        "description": "The main system unit is ejected from the docking station."
+      },
+      "19": {
+        "name": "Disabling Docking Station",
+        "description": "The system firmware or BIOS is disabling the docking station."
+      },
+      "20": {
+        "name": "Calling Operating System Wake-Up Vector",
+        "description": "The system firmware or BIOS is starting the operating system."
+      },
+      "21": {
+        "name": "Starting Operating System Boot",
+        "description": "Process (for example, calling INT 19h) The system firmware or BIOS is booting the operating system."
+      },
+      "22": {
+        "name": "",
+        "description": "Baseboard or Motherboard Initialization The BIOS is initializing the motherboard."
+      },
+      "23": {
+        "name": "Floppy Initialization The",
+        "description": "BIOS is initializing the floppy drive."
+      },
+      "24": {
+        "name": "Keyboard Test The",
+        "description": "BIOS is testing the keyboard."
+      },
+      "25": {
+        "name": "Pointing Device Test The",
+        "description": "BIOS is testing the pointing device."
+      },
+      "26": {
+        "name": "Primary Processor Initialization The",
+        "description": "BIOS is initializing the primary processor."
+      }
+    }
+  },
+  "197": {
+    "name": "System Firmware Hang",
+    "description": "Indicates if system firmware (BIOS) has been suspended.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No system firmware hang is detected."
+      },
+      "2": {
+        "name": "System Firmware Hang Detected",
+        "description": "The system firmware’s execution has suspended."
+      }
+    }
+  },
+  "198": {
+    "name": "POST Errors",
+    "description": "Errors detected in the system firmware (BIOS) power on self test.",
+    "state": {
+      "1": {
+        "name": "No POST Error Detected",
+        "description": "A system firmware error is not detected."
+      },
+      "2": {
+        "name": "No System Memory Is Physically",
+        "description": "Installed in the System. The system firmware determined that no system memory is physically installed in the system."
+      },
+      "3": {
+        "name": "No Usable System Memory, All Installed Memory Has",
+        "description": "Experienced an Unrecoverable Failure The system firmware determined that no usable system memory is available."
+      },
+      "4": {
+        "name": "Unrecoverable Hard-Disk Device Failure",
+        "description": "The system firmware detected that a hard-disk device has failed and is likely unusable for booting the operating system."
+      },
+      "5": {
+        "name": "Unrecoverable System-Board Failure",
+        "description": "The system firmware detected an unrecoverable error in the main system board or board set. This error may prevent the system from further operation."
+      },
+      "6": {
+        "name": "Unrecoverable Diskette Subsystem Failure",
+        "description": "The system firmware detected a failure in the diskette subsystem."
+      },
+      "7": {
+        "name": "Unrecoverable Hard-Disk Controller Failure",
+        "description": "The system firmware detected that a hard-disk controller has failed and is likely unusable for booting the operating system."
+      },
+      "8": {
+        "name": "Unrecoverable",
+        "description": "PS/2 or USB Keyboard Failure The system firmware detected a failure in the keyboard."
+      },
+      "9": {
+        "name": "Removable Boot Media Not Found",
+        "description": "The system firmware detected that a removable media device that was designated as a boot source does not have any media installed."
+      },
+      "10": {
+        "name": "Unrecoverable Video Controller Failure",
+        "description": "The system firmware detected a failure with a video controller. (The controller is likely unusable for driving the display device for a user interface for system firmware configuration.) This error is typically related to the display controller that drives a primary display device that would be used to locally display a user interface for system firmware configuration and as the primary local display used by the operating system."
+      },
+      "11": {
+        "name": "No Video Device Detected",
+        "description": "The system firmware has not been able to detect the presence of a video output device (computer display or computer monitor). This error is typically related to the primary display device that would be used to locally display a user interface for system firmware configuration and as the primary local display used by the operating system."
+      },
+      "12": {
+        "name": "",
+        "description": "Firmware (BIOS) ROM Corruption Detected The system firmware detected that its own firmware image is corrupted."
+      },
+      "13": {
+        "name": "CPU Voltage",
+        "description": "Mismatch (processors that share same supply have mismatched voltage requirements) The system firmware detected that processors that share the same supply have mismatched voltage requirements, and is therefore preventing running further."
+      },
+      "14": {
+        "name": "CPU Speed Matching Failure",
+        "description": "The system firmware detected that the processors are operating with a combination of speeds that is not supported by the platform."
+      },
+      "15": {
+        "name": "FRB1/BIST Failure",
+        "description": "A processor BIST (built-in self test) failure is detected."
+      }
+    }
+  },
+  "225": {
+    "name": "Log Fill Status",
+    "description": "State of the log.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Logging is enabled. The log is not empty."
+      },
+      "2": {
+        "name": "Reset/Cleared",
+        "description": "Logging is enabled. A reset or clear signal has emptied the log."
+      },
+      "3": {
+        "name": "Almost Full",
+        "description": "Logging is enabled. The log has limited capacity for future entries."
+      },
+      "4": {
+        "name": "Full",
+        "description": "Logging is enabled. The log is full; no future entries can be added."
+      }
+    }
+  },
+  "226": {
+    "name": "Filter Status Log",
+    "description": "Log filtering.",
+    "state": {
+      "1": {
+        "name": "Unfiltered",
+        "description": "Logging is enabled. All entries are logged."
+      },
+      "2": {
+        "name": "Filtered",
+        "description": "Logging is enabled, but some entries have been filtered."
+      }
+    }
+  },
+  "227": {
+    "name": "Log Timestamp Change",
+    "description": "State of the log timestamp.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "A log timestamp change is not detected."
+      },
+      "2": {
+        "name": "Timestamp Clock Sync",
+        "description": "A log timestamp has been changed."
+      }
+    }
+  },
+  "228": {
+    "name": "Requested Interrupt",
+    "description": "Interrupt requested by entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No interrupt is requested."
+      },
+      "2": {
+        "name": "Requested  Interrupt",
+        "description": "Interrupt is requested by entity."
+      }
+    }
+  },
+  "229": {
+    "name": "Received Interrupt",
+    "description": "Interrupt received by entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No interrupt is received."
+      },
+      "2": {
+        "name": "Received  Interrupt",
+        "description": "Interrupt is received by the entity."
+      }
+    }
+  },
+  "230": {
+    "name": "Interrupt Requested Diagnostic",
+    "description": "Diagnostic interrupt requested by entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No diagnostic interrupt is requested."
+      },
+      "2": {
+        "name": "Interrupt Requested  Diagnostic",
+        "description": "Diagnostic interrupt is requested by the entity. (This is equivalent to a front-panel NMI on some systems.)"
+      }
+    }
+  },
+  "231": {
+    "name": "Interrupt Received Diagnostic",
+    "description": "Diagnostic interrupt received by entity.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No diagnostic interrupt is received."
+      },
+      "2": {
+        "name": "Interrupt Received  Diagnostic",
+        "description": "Diagnostic interrupt is received by the entity. (This is equivalent to a front-panel NMI on some systems.)"
+      }
+    }
+  },
+  "232": {
+    "name": "I/O Channel Check Requested I/O Channel Check NMI",
+    "description": "NMI requested by entity.",
+    "state": {
+      "1": {
+        "name": "Normal No I/O Channel Check",
+        "description": "NMI is requested."
+      },
+      "2": {
+        "name": "I/O Channel Check Requested  I/O Channel Check NMI",
+        "description": "NMI is requested by the entity."
+      }
+    }
+  },
+  "233": {
+    "name": "I/O Channel Check NMI Received",
+    "description": "Diagnostic interrupt received by entity.",
+    "state": {
+      "1": {
+        "name": "Normal No I/O Channel Check",
+        "description": "NMI is received."
+      },
+      "2": {
+        "name": "I/O Channel Check Received  I/O Channel Check NMI",
+        "description": "NMI is received by the entity."
+      }
+    }
+  },
+  "234": {
+    "name": "Fatal Requested Fatal NMI",
+    "description": "NMI requested by entity.",
+    "state": {
+      "1": {
+        "name": "Normal No Fatal",
+        "description": "NMI is requested."
+      },
+      "2": {
+        "name": "Fatal Requested  Fatal NMI",
+        "description": "NMI is requested by the entity."
+      }
+    }
+  },
+  "235": {
+    "name": "Fatal Received Fatal NMI",
+    "description": "NMI received by entity.",
+    "state": {
+      "1": {
+        "name": "Normal No Fatal",
+        "description": "NMI is received."
+      },
+      "2": {
+        "name": "Fatal Received Fatal NMI",
+        "description": "NMI is received by the entity."
+      }
+    }
+  },
+  "236": {
+    "name": "Software Requested Software NMI",
+    "description": "NMI requested by entity.",
+    "state": {
+      "1": {
+        "name": "Normal No Software",
+        "description": "NMI is requested."
+      },
+      "2": {
+        "name": "Software Request  Software NMI",
+        "description": "NMI is requested by the entity."
+      }
+    }
+  },
+  "237": {
+    "name": "Software Received Software NMI",
+    "description": "NMI received.",
+    "state": {
+      "1": {
+        "name": "Normal No Software",
+        "description": "NMI is received."
+      },
+      "2": {
+        "name": "NMI Received Software",
+        "description": "Software generated NMI is received by the entity."
+      }
+    }
+  },
+  "238": {
+    "name": "Received SMI",
+    "description": "SMI received.",
+    "state": {
+      "1": {
+        "name": "Normal No",
+        "description": "SMI is received."
+      },
+      "2": {
+        "name": "SMI Received  System Management",
+        "description": "Interrupt is received by the entity."
+      }
+    }
+  },
+  "239": {
+    "name": "PCI Requested PCI PERR",
+    "description": "PERR requested.",
+    "state": {
+      "1": {
+        "name": "Normal No PCI Parity",
+        "description": "Error is requested."
+      },
+      "2": {
+        "name": "PCI PERR Requested PCI Parity",
+        "description": "Error is requested by the entity."
+      }
+    }
+  },
+  "240": {
+    "name": "PCI Received PCI PERR",
+    "description": "PERR received.",
+    "state": {
+      "1": {
+        "name": "Normal No PCI Parity",
+        "description": "Error is received."
+      },
+      "2": {
+        "name": "PCI PERR Received PCI Parity",
+        "description": "Error is received by the entity."
+      }
+    }
+  },
+  "241": {
+    "name": "PCI Requested  PCI SERR",
+    "description": "SERR requested.",
+    "state": {
+      "1": {
+        "name": "Normal No PCI",
+        "description": "SERR is requested."
+      },
+      "2": {
+        "name": "PCI SERR Requested PCI System",
+        "description": "Error is requested by the entity."
+      }
+    }
+  },
+  "242": {
+    "name": "PCI Received PCI SERR",
+    "description": "SERR received.",
+    "state": {
+      "1": {
+        "name": "Normal No PCH",
+        "description": "SERR is received."
+      },
+      "2": {
+        "name": "PCI SERR Received  PCI System",
+        "description": "Error is received by the entity."
+      }
+    }
+  },
+  "243": {
+    "name": "Bus Error Error Status",
+    "description": "Status related to busses",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No bus error is detected."
+      },
+      "2": {
+        "name": "Correctable Error Bus",
+        "description": "Bus transaction with correctable error occurred."
+      },
+      "3": {
+        "name": "Uncorrectable Error Bus",
+        "description": "Bus transaction with uncorrectable error occurred."
+      },
+      "4": {
+        "name": "Fatal Error Bus",
+        "description": "Bus transaction with fatal error occurred."
+      },
+      "5": {
+        "name": "Degraded Bus",
+        "description": "Bus is operating in a degraded state."
+      },
+      "6": {
+        "name": "",
+        "description": "Bus timeout A bus transaction timeout occurred."
+      }
+    }
+  },
+  "244": {
+    "name": "Watchdog Status",
+    "description": "Conditions related to the watchdog timer.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No watchdog event is detected."
+      },
+      "2": {
+        "name": "Timer Expired",
+        "description": "The watchdog timer expired."
+      },
+      "3": {
+        "name": "",
+        "description": "Pre-expire interrupt   Watchdog pre-timeout interrupt occurred."
+      }
+    }
+  },
+  "256": {
+    "name": "Power Supply State",
+    "description": "Conditions related to power units or power supplies.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No adverse conditions are detected with the power supply entity."
+      },
+      "2": {
+        "name": "Power Input Lost",
+        "description": "The power supply entity lost power from the source."
+      },
+      "3": {
+        "name": "Power",
+        "description": "Input out-of-range The power supplied to the power supply entity is out of range."
+      },
+      "4": {
+        "name": "",
+        "description": "Power down/off  The power supply entity is in a power down state."
+      },
+      "5": {
+        "name": "Power Cycle",
+        "description": "The power supply entity is in a power cycle state."
+      },
+      "6": {
+        "name": "Soft Power Control Failure",
+        "description": "The power supply entity has encountered a soft power control failure."
+      },
+      "7": {
+        "name": "Voltage",
+        "description": "Input out of Range The power source voltage for the power supply entity is out of range."
+      },
+      "8": {
+        "name": "Current",
+        "description": "Input out of Range The power source current for the power supply entity is out of range."
+      },
+      "9": {
+        "name": "Power Out Failed/Lost",
+        "description": "The power output of the power supply entity is absent."
+      },
+      "10": {
+        "name": "Thermal Trip",
+        "description": "The power supply has experienced a thermal trip."
+      }
+    }
+  },
+  "257": {
+    "name": "Device Power State",
+    "description": "ACPI device power state.",
+    "state": {
+      "1": {
+        "name": "D0 The ACPI Device Power",
+        "description": "State is D0: Fully-On."
+      },
+      "2": {
+        "name": "D1 The ACPI Device Power",
+        "description": "State is D1.Intermediate Power State 1"
+      },
+      "3": {
+        "name": "D2 The ACPI Device Power",
+        "description": "State is D2.Intermediate Power State 2"
+      },
+      "4": {
+        "name": "D3 The ACPI Device Power",
+        "description": "State is D3: Off."
+      }
+    }
+  },
+  "258": {
+    "name": "Power State ACPI",
+    "description": "ACPI power state of the system",
+    "state": {
+      "1": {
+        "name": "S0  The ACPI Global",
+        "description": "State is G0/S0: Working."
+      },
+      "2": {
+        "name": "S1 The ACPI Global",
+        "description": "State is S1: Sleeping State."
+      },
+      "3": {
+        "name": "S2  The ACPI Global",
+        "description": "State is S2: Sleeping State."
+      },
+      "4": {
+        "name": "S3 The ACPI Global",
+        "description": "State is S3: Sleeping State."
+      },
+      "5": {
+        "name": "S4  The ACPI Global",
+        "description": "State is S4: Sleeping State."
+      },
+      "6": {
+        "name": "S5 The ACPI Global",
+        "description": "State is S5: Soft Off State."
+      },
+      "7": {
+        "name": "G3  The ACPI Global",
+        "description": "State is G3: Mechanical Off."
+      }
+    }
+  },
+  "259": {
+    "name": "Backup Power Source",
+    "description": "Indicates what backup power source is available if primary power is gone.",
+    "state": {
+      "1": {
+        "name": "Backup Power Source No",
+        "description": "No backup power source is available."
+      },
+      "2": {
+        "name": "UPS Detected",
+        "description": "A backup power source is available."
+      }
+    }
+  },
+  "260": {
+    "name": "System State  Power",
+    "description": "Power states of the system or an entity in the system.",
+    "state": {
+      "1": {
+        "name": "On  System",
+        "description": "Power is On."
+      },
+      "2": {
+        "name": "",
+        "description": "Hibernate (off-soft) System Power is in Hibernate mode."
+      },
+      "3": {
+        "name": "Sleep – Light  System",
+        "description": "Power is in light sleep mode."
+      },
+      "4": {
+        "name": "Sleep – Deep System",
+        "description": "Power is in deep sleep mode."
+      },
+      "5": {
+        "name": "Cycle Soft  System Power",
+        "description": "Power is cycling to soft off mode."
+      },
+      "6": {
+        "name": "Cycle Hard System Power",
+        "description": "Power is cycling to hard off mode."
+      },
+      "7": {
+        "name": "Cycle Off-Soft Graceful System Power",
+        "description": "Power is forcing soft off mode."
+      },
+      "8": {
+        "name": "Cycle Off-Hard Graceful System Power",
+        "description": "Power is forcing hard off mode."
+      },
+      "9": {
+        "name": "Off-Soft Graceful  System",
+        "description": "Power is in soft off mode."
+      },
+      "10": {
+        "name": "Off-Hard Graceful System",
+        "description": "Power is in hard off mode."
+      },
+      "11": {
+        "name": "Master Bus Reset",
+        "description": "System is reaching ACPI state S5 followed by ACPI state S0 in the case of the system master bus reset."
+      },
+      "12": {
+        "name": "Master Bus",
+        "description": "Reset (Graceful) System is reaching ACPI state S5 followed by ACPI state S0 in the case of the system master bus reset in a somehow graceful manner."
+      },
+      "13": {
+        "name": "Diagnostic",
+        "description": "Interrupt (NMI) System is reaching ACPI state S5 followed by ACPI state S0, in the case of a non-maskable interrupt."
+      }
+    }
+  },
+  "261": {
+    "name": "Battery Activity",
+    "description": "Current maintenance activity for a battery-like device.",
+    "state": {
+      "1": {
+        "name": "Activity No",
+        "description": "No activity is detected on the battery."
+      },
+      "2": {
+        "name": "Reconditioning",
+        "description": "The battery is being reconditioned."
+      },
+      "3": {
+        "name": "",
+        "description": "Charging under Load The battery is being charged, but with a load."
+      },
+      "4": {
+        "name": "Charging",
+        "description": "The battery is being charged."
+      },
+      "5": {
+        "name": "Discharging",
+        "description": "The battery is being discharged."
+      }
+    }
+  },
+  "262": {
+    "name": "Battery State",
+    "description": "Power capacity condition of a battery-like device.",
+    "state": {
+      "1": {
+        "name": "Fully Charged",
+        "description": "The battery is fully charged."
+      },
+      "2": {
+        "name": "Partially Charged",
+        "description": "The battery is less than fully charged but within normal charge level."
+      },
+      "3": {
+        "name": "Low",
+        "description": "The battery charge level is low."
+      },
+      "4": {
+        "name": "Near Critically Low",
+        "description": "The battery charge level is near critical low."
+      },
+      "5": {
+        "name": "Depleted",
+        "description": "The battery has been depleted."
+      }
+    }
+  },
+  "288": {
+    "name": "Processor Power State",
+    "description": "ACPI power state of a processor.",
+    "state": {
+      "1": {
+        "name": "C0",
+        "description": "CPU is in ACPI C-State 0."
+      },
+      "2": {
+        "name": "C1",
+        "description": "CPU is in ACPI C-State 1."
+      },
+      "3": {
+        "name": "C2",
+        "description": "CPU is in ACPI C-State 2."
+      },
+      "4": {
+        "name": "C3",
+        "description": "CPU is in ACPI C-State 3."
+      }
+    }
+  },
+  "289": {
+    "name": "Power-Performance State",
+    "description": "ACPI power performance state of a processor.",
+    "state": {
+      "1": {
+        "name": "P0",
+        "description": "CPU is in ACPI P-State 0."
+      },
+      "2": {
+        "name": "P1",
+        "description": "CPU is in ACPI P-State 1."
+      },
+      "3": {
+        "name": "P2",
+        "description": "CPU is in ACPI P-State 2."
+      },
+      "4": {
+        "name": "P3",
+        "description": "CPU is in ACPI P-State 3."
+      },
+      "5": {
+        "name": "P4",
+        "description": "CPU is in ACPI P-State 4."
+      },
+      "6": {
+        "name": "P5",
+        "description": "CPU is in ACPI P-State 5."
+      },
+      "7": {
+        "name": "P6",
+        "description": "CPU is in ACPI P-State 6."
+      },
+      "8": {
+        "name": "P7",
+        "description": "CPU is in ACPI P-State 7."
+      },
+      "9": {
+        "name": "P8",
+        "description": "CPU is in ACPI P-State 8."
+      },
+      "10": {
+        "name": "P9",
+        "description": "CPU is in ACPI P-State 9."
+      },
+      "11": {
+        "name": "P10",
+        "description": "CPU is in ACPI P-State 10."
+      },
+      "12": {
+        "name": "P11",
+        "description": "CPU is in ACPI P-State 11."
+      },
+      "13": {
+        "name": "P12",
+        "description": "CPU is in ACPI P-State 12."
+      },
+      "14": {
+        "name": "P13",
+        "description": "CPU is in ACPI P-State 13."
+      },
+      "15": {
+        "name": "P14",
+        "description": "CPU is in ACPI P-State 14."
+      },
+      "16": {
+        "name": "P15",
+        "description": "CPU is in ACPI P-State 15."
+      },
+      "17": {
+        "name": "P16",
+        "description": "CPU is in ACPI P-State 16."
+      }
+    }
+  },
+  "290": {
+    "name": "Processor Status Error",
+    "description": "Error conditions related to processor hardware.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "A fatal internal processor error is not presently detected."
+      },
+      "2": {
+        "name": "IERR",
+        "description": "A fatal internal processor error is detected. This error is related to a halt of the processor."
+      }
+    }
+  },
+  "291": {
+    "name": "BIST Status BIST Failure",
+    "description": "Failure detection.",
+    "state": {
+      "1": {
+        "name": "Normal A",
+        "description": "BIST (built-in self test) failure is not detected."
+      },
+      "2": {
+        "name": "Failure A BIST",
+        "description": "BIST failure (built-in self test) is detected."
+      }
+    }
+  },
+  "293": {
+    "name": "Processor",
+    "description": "Hang in POST Processor hang in system firmware (BIOS) power on self test.",
+    "state": {
+      "1": {
+        "name": "Normal A",
+        "description": "POST hang that is being attributed to a processor hang is not detected. (This was referred to as FRB2 in IPMI.)"
+      },
+      "2": {
+        "name": "",
+        "description": "FRB2/Hang in POST  A hang in POST or system firmware initialization is detected that is being attributed to a processor hang."
+      }
+    }
+  },
+  "294": {
+    "name": "Startup Failure Processor",
+    "description": "Processor fails to start system firmware (BIOS) power on self test.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "A processor startup failure is not detected. (This was referred to as FRB3 in IPMI.)"
+      },
+      "2": {
+        "name": "FRB3/Processor Failure",
+        "description": "The processor has been powered up or reset and has failed to start POST or system firmware initialization."
+      }
+    }
+  },
+  "295": {
+    "name": "CPU Error Uncorrectable",
+    "description": "Uncorrectable processor CPU error.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "An uncorrectable CPU error is not detected."
+      },
+      "2": {
+        "name": "Uncorrectable CPU Error",
+        "description": "An uncorrectable error is detected."
+      }
+    }
+  },
+  "296": {
+    "name": "Machine Check Error",
+    "description": "Indicates presence of Machine Check Error (MCE).",
+    "state": {
+      "1": {
+        "name": "MCE Not Detected A Machine Check",
+        "description": "Error (MCE) is not detected."
+      },
+      "2": {
+        "name": "MCE Detected A Machine Check",
+        "description": "Error (MCE) occurred. This is a type of critical error that is detected by processor hardware that may be related to internal storage or state machine corruption or external errors that affect the ability of the hardware to continue processing the intended instruction flow. The error is typically associated with the generation of a corresponding software interrupt called a machine check exception. Depending on the error, it may or may not be able to be corrected by additional actions by software that handles the machine check exception."
+      }
+    }
+  },
+  "297": {
+    "name": "Corrected Machine Check",
+    "description": "Indicates the correction of Machine Check Error.",
+    "state": {
+      "1": {
+        "name": "Normal A Corrected Machine",
+        "description": "Check (CMC) error is not detected."
+      },
+      "2": {
+        "name": "Corrected MCE Detected   A Machine Check",
+        "description": "Error has been detected and corrected. This is an error that is detected by processor hardware that may be related to internal storage or state machine corruption or external errors that would affect the ability of the hardware to continue processing the intended instruction flow, but that has been automatically corrected by the hardware."
+      }
+    }
+  },
+  "320": {
+    "name": "Cache Status",
+    "description": "Conditions related to cache memory.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "The cache appears to be operating normally."
+      },
+      "2": {
+        "name": "",
+        "description": "Dirty upon Power On The cache memory has been powered up with data still resident in its memory."
+      }
+    }
+  },
+  "321": {
+    "name": "Memory Status  Error",
+    "description": "Error conditions related to memory devices.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Memory is operating normally. No error conditions are detected."
+      },
+      "2": {
+        "name": "Bad Read",
+        "description": "A bad read (limit exceeded) event occurred in memory."
+      },
+      "3": {
+        "name": "Parity Error",
+        "description": "A parity error (limit exceeded) is detected in memory."
+      },
+      "4": {
+        "name": "Single-Bit Error",
+        "description": "A single-bit error (limit exceeded) is detected in memory."
+      },
+      "5": {
+        "name": "Double-Bit Error",
+        "description": "A double-bit error (limit exceeded) is detected in memory."
+      },
+      "6": {
+        "name": "Multi-Bit Error",
+        "description": "A multi-bit error (limit exceeded) is detected in memory."
+      },
+      "7": {
+        "name": "Nibble Error",
+        "description": "A nibble error (limit exceeded) is detected."
+      },
+      "8": {
+        "name": "Checksum Error",
+        "description": "A checksum error (limit exceeded) is detected."
+      },
+      "9": {
+        "name": "Error A CRC",
+        "description": "CRC error (limit exceeded) is detected."
+      }
+    }
+  },
+  "322": {
+    "name": "Redundant Memory Activity Status",
+    "description": "Activities related to memory participating in a redundant memory group.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "No maintenance or configuration operation is currently detected on the memory entity."
+      },
+      "2": {
+        "name": "Scrub",
+        "description": "A scrub operation is active on the memory entity."
+      },
+      "3": {
+        "name": "Remap",
+        "description": "A remapping operation is active on the memory entity. NOTE:  Some memories have thresholds of events so that an error condition occurs only when the number of occurrences of an 281 event (such as a parity error) exceeds a defined threshold. 282"
+      }
+    }
+  },
+  "330": {
+    "name": "Detection Status Error",
+    "description": "Error conditions related to devices that can perform error checks.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Device is operating normally. No error conditions are detected."
+      },
+      "2": {
+        "name": "Correctable ECC",
+        "description": "ECC circuits detected bit errors that could be corrected by the ECC logic."
+      },
+      "3": {
+        "name": "Uncorrectable ECC",
+        "description": "ECC circuits detected bit errors that could not be corrected."
+      },
+      "4": {
+        "name": "Parity Error",
+        "description": "A parity error is detected."
+      },
+      "5": {
+        "name": "Checksum Error",
+        "description": "A checksum error is detected."
+      },
+      "6": {
+        "name": "Error A CRC",
+        "description": "CRC error is detected."
+      }
+    }
+  },
+  "331": {
+    "name": "Stuck Bit Status",
+    "description": "State of stuck bits.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Memory is operating normally. No error conditions are detected."
+      },
+      "2": {
+        "name": "Stuck Bit",
+        "description": "A stuck-at bit is detected."
+      }
+    }
+  },
+  "332": {
+    "name": "Scrub Status",
+    "description": "State of scrub process.",
+    "state": {
+      "1": {
+        "name": "Normal",
+        "description": "Device is operating normally. No error conditions are detected. Previous scrub status is unknown."
+      },
+      "2": {
+        "name": "Completed Successfully",
+        "description": "Scrub completed with no errors."
+      },
+      "3": {
+        "name": "",
+        "description": "Scrub in Process Scrub is initiated but not yet complete."
+      },
+      "4": {
+        "name": "Failed  Scrub",
+        "description": "Scrub is completed; unable to purge errors."
+      }
+    }
+  },
+  "352": {
+    "name": "Slot Occupancy",
+    "description": "Any slot-like entity, such as a drive slot or PCI slot.",
+    "state": {
+      "1": {
+        "name": "Empty",
+        "description": "The slot is not currently occupied."
+      },
+      "2": {
+        "name": "Occupied",
+        "description": "The slot is occupied."
+      }
+    }
+  },
+  "353": {
+    "name": "Slot State",
+    "description": "State of the slot entity.",
+    "state": {
+      "1": {
+        "name": "Not",
+        "description": "Ready for Install/Removal The slot is not electrically/mechanically ready to install or remove a device."
+      },
+      "2": {
+        "name": "",
+        "description": "Ready for Device Installation The slot is unoccupied and is electrically/mechanically ready to accept a device."
+      },
+      "3": {
+        "name": "",
+        "description": "Ready for Device Removal The slot is occupied and is electrically/mechanically ready for device removal."
+      }
+    }
+  },
+  "65535": {
+    "name": "State Sets OEM",
+    "description": "OEM reserved state sets.  All other state set values reserved",
+    "state": {}
+  }
+}
