@@ -1,0 +1,19 @@
+{
+  "name": "ost-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "excel4node": "^1.7.2",
+    "exceljs": "^4.3.0",
+    "firebase-admin": "^10.0.1",
+    "node-xlsx": "^0.21.0"
+  }
+}
